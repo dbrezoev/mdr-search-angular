@@ -1,6 +1,6 @@
 {
-  "name": "music-artists",
-  "description": "Music Artists SPA",
-  "repository": "https://github.com/ivaylokenov/Music-Artists/",
+  "name": "mdr-search",
+  "description": "",
+  "repository": "https://github.com/dbrezoev/mdr-search-angular/",
   "devDependencies": {}
 }
