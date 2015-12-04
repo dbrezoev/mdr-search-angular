@@ -65,3 +65,8 @@ input.ng-dirty.ng-valid.validity {
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
+
+/*.myGrid {*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+/*}*/
