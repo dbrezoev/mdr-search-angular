@@ -1,14 +1,13 @@
 <div class="container clearfix" ng-controller="SearchController">
     <div class="container">
         <h1>Search Form Here</h1>
-        <div class="row" ng-repeat="member in members">
-            <p>
-                <strong>{{member.name}}</strong>
-            </p>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3>Search call</h3>
+            </div>
+            <div class="panel-body">
+                <div ui-grid="{data: myData}" class="myGrid"></div>
+            </div>
         </div>
-        <hr/>
-        <p>tuka</p>
-        <div ui-grid="{data: myData}" class="myGrid"></div>ss
-        <p>i tuka</p>
     </div>
 </div>
