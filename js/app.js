@@ -1,7 +1,7 @@
 'use strict';
 
 var mdrSearchApp = angular
-    .module('mdrSearchApp', ['ngRoute', 'ngTouch', 'ui.grid'])
+    .module('mdrSearchApp', ['ngRoute', 'ui.grid'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/home', {

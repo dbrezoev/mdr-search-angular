@@ -8,7 +8,6 @@ mdrSearchApp.factory('dataProvider', function($http, $q) {
             var deferred = $q.defer();
             $http.get(url)
                 .success(function (data) {
-                    debugger;
                     deferred.resolve(data);
                 })
                 .error(function (err) {
