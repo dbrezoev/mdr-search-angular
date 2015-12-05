@@ -110,6 +110,7 @@ mdrSearchApp.controller('SearchController',
 
         //
         $scope.gridOptions = {
+            enableGridMenu: true,
             enablePagination: true,
             enablePaginationControls: true,
             paginationPageSizes: [5, 7, 9],
