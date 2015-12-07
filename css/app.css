@@ -66,12 +66,10 @@ input.ng-dirty.ng-valid.validity {
   display: none !important;
 }
 
-/*.myGrid {*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-/*}*/
-
-/*@font-face {*/
-    /*font-family: 'ui-grid';*/
-    /*src: url('ui-grid.ttf?') format('truetype');*/
-/*}*/
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+    color: red;
+}
