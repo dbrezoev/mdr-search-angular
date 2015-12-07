@@ -7,28 +7,14 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-sm-6">
-                        <form class="form-inline form-group">
-                            <div class="">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="fromDate">From</label>
-                                        <input type="text" class="form-control" id="fromDate" placeholder="Must be datepicker"/>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="toDate">To</label>
-                                        <input type="text" class="form-control" id="toDate" placeholder="datepicker again"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="" style="background-color: #0f7864">
-                                <div class="col-sm-12">
-                                    <div class="form-group has-feedback">
-                                        <input type="text" class="form-control" placeholder="Search" />
-                                        <i class="glyphicon glyphicon-search form-control-feedback"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="col-sm-6">
+                            <label for="fromDate">From</label>
+                            <input type="text" class="form-control" id="fromDate" placeholder="Must be datepicker"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="toDate">To</label>
+                            <input type="text" class="form-control" id="toDate" placeholder="datepicker again"/>
+                        </div>
                     </div>
                     <div class="col-sm-6">
                         <form class="form-inline">
@@ -75,8 +61,16 @@
                         </form>
                     </div>
                 </div>
+                <br>
                 <div clas="row">
-                    <div class="col-sm-6 col-sm-push-6">
+                    <div class="col-sm-6">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
                         <button class="btn btn-primary btn-sm">
                             New Search
                         </button>
@@ -86,6 +80,7 @@
                         </button>
                     </div>
                 </div>
+                <br>
                 <br>
                 <br>
                 <div ui-grid="gridOptions" ui-grid-exporter ui-grid-selection ui-grid-pagination class="grid"></div>

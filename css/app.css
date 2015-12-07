@@ -73,7 +73,14 @@ input.ng-dirty.ng-valid.validity {
     pointer-events: none;
     color: red;
 }
+/*---------------------------CUSTOM CSS STARTS HERE-----------------------------*/
 
 .container {
     width: auto;
 }
+
+.has-feedback .form-control-feedback {
+    top: 0px;;
+}
+
+/*---------------------------CUSTOM CSS FINISH HERE-----------------------------*/
