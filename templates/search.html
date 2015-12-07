@@ -1,6 +1,6 @@
 <div class="container clearfix" ng-controller="SearchController">
     <div class="container">
-        <div class="panel panel-primary">
+        <div class="panel panel-success">
             <div class="panel-heading">
                 <h5>Search call</h5>
             </div>
@@ -86,9 +86,12 @@
                         </button>
                     </div>
                 </div>
+                <br>
+                <br>
+                <div ui-grid="gridOptions" ui-grid-exporter ui-grid-selection ui-grid-pagination class="grid"></div>
             </div>
         </div>
 
-        <div ui-grid="gridOptions" ui-grid-exporter ui-grid-selection ui-grid-pagination class="grid"></div>
+
     </div>
 </div>

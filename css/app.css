@@ -73,3 +73,7 @@ input.ng-dirty.ng-valid.validity {
     pointer-events: none;
     color: red;
 }
+
+.container {
+    width: auto;
+}
