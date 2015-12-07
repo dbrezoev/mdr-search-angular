@@ -2,9 +2,9 @@
 
 mdrSearchApp.controller('SearchController',
     function SearchController($scope, $route, dataProvider) {
-        dataProvider.getMembers().then(function(members) {
-            $scope.members = members;
-        });
+        //dataProvider.getMembers().then(function(members) {
+        //    $scope.members = members;
+        //});
 
         $scope.myData = [{
                 "name": "Cox",
