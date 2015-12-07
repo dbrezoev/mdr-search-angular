@@ -2,5 +2,7 @@
   "name": "mdr-search",
   "description": "",
   "repository": "https://github.com/dbrezoev/mdr-search-angular/",
-  "devDependencies": {}
+  "devDependencies": {
+    "express": "^4.13.3"
+  }
 }
