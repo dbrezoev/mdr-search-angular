@@ -83,4 +83,9 @@ input.ng-dirty.ng-valid.validity {
     top: 0px;;
 }
 
+.datepicker .btn-default {
+    border-width: 0;
+    box-shadow: none;
+}
+
 /*---------------------------CUSTOM CSS FINISH HERE-----------------------------*/
