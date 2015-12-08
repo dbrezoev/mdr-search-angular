@@ -638,6 +638,9 @@ mdrSearchApp.controller('SearchController',
         };
 
         $scope.gridOptions = gridOptions;
+        $scope.gridOptions.data = data;
+
+        $scope.gridOptions = gridOptions;
 
         $scope.search = function(date) {
             debugger
