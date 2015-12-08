@@ -5,138 +5,657 @@ mdrSearchApp.controller('SearchController',
         //dataProvider.getMembers().then(function(members) {
         //    $scope.members = members;
         //});
-        debugger;
-        //var defaults = {
-        //    date: x ||
-        //}
+        var data = [{
+            "memberName": "Cox",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Jack",
+            "callerLastName": "Nicholson",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        }, {
+            "memberName": "Steve",
+            "callDate": "12/11/2015",
+            "callerFirstName": "Raplh",
+            "callerLastName": "Fiennes",
+            "callerRelationship": "uncle",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-333-111",
+            "callDuration": "89",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Sam",
+            "callDate": "10/10/2015",
+            "callerFirstName": "Daniel",
+            "callerLastName": "Day-Lewis",
+            "callerRelationship": "brother",
+            "callStatus": "unsuccessfull",
+            "callerPhoneNumber": "789-111-111",
+            "callDuration": "0",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Roy",
+            "callDate": "11/09/2015",
+            "callerFirstName": "Robert",
+            "callerLastName": "De Niro",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-456-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Me",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Al",
+            "callerLastName": "Pacino",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-101-000",
+            "callDuration": "420",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "John",
+            "callDate": "03/05/2015",
+            "callerFirstName": "Dustin",
+            "callerLastName": "Hoffman",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "123-456-789",
+            "callDuration": "555",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Carl",
+            "callDate": "12/12/2015",
+            "callerFirstName": "Brad",
+            "callerLastName": "Pitt",
+            "callerRelationship": "classMate",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "131-313",
+            "callDuration": "421",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Rob",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Anthony",
+            "callerLastName": "Hopkins",
+            "callerRelationship": "unknown",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "100-000-000",
+            "callDuration": "892",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Linda",
+            "callDate": "11/12/2015",
+            "callerFirstName": "Marlon",
+            "callerLastName": "Brando",
+            "callerRelationship": "daughter",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "1345611",
+            "callDuration": "9547",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Tim",
+            "callDate": "10/10/2015",
+            "callerFirstName": "Jeremy",
+            "callerLastName": "Irons",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "551-111-111",
+            "callDuration": "88",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Sammy",
+            "callDate": "11/08/2015",
+            "callerFirstName": "Denzel",
+            "callerLastName": "Washington",
+            "callerRelationship": "brother",
+            "callStatus": "unsuccessfull",
+            "callerPhoneNumber": "111-111-444",
+            "callDuration": "0",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Adam",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Gene",
+            "callerLastName": "Hackman",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Rooney",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Jeff",
+            "callerLastName": "Bridges",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "NUMBER",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Alex",
+            "callDate": "05/11/2015",
+            "callerFirstName": "Tim",
+            "callerLastName": "Robins",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Alexey",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Henry",
+            "callerLastName": "Fonda",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Kelly",
+            "callDate": "11/11/2015",
+            "callerFirstName": "William",
+            "callerLastName": "Hurt",
+            "callerRelationship": "sister",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-4345-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Zlatan",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Kevin",
+            "callerLastName": "Costner",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Clint",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Clint",
+            "callerLastName": "Eastwood",
+            "callerRelationship": "same",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "Santa Claus",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Leonardo",
+            "callerLastName": "DiCaprio",
+            "callerRelationship": "grandpa",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        },{
+            "memberName": "No name",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Mel",
+            "callerLastName": "Gibson",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "6787",
+            "callType": "Any type",
+            "anotherCallProperty": "info"
+        }];
+
+        var dataWithMoreProperties = [{
+            "memberName": "Cox",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Jack",
+            "callerLastName": "Nicholson",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        }, {
+            "memberName": "Steve",
+            "callDate": "12/11/2015",
+            "callerFirstName": "Raplh",
+            "callerLastName": "Fiennes",
+            "callerRelationship": "uncle",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-333-111",
+            "callDuration": "89",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Sam",
+            "callDate": "10/10/2015",
+            "callerFirstName": "Daniel",
+            "callerLastName": "Day-Lewis",
+            "callerRelationship": "brother",
+            "callStatus": "unsuccessfull",
+            "callerPhoneNumber": "789-111-111",
+            "callDuration": "0",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Roy",
+            "callDate": "11/09/2015",
+            "callerFirstName": "Robert",
+            "callerLastName": "De Niro",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-456-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Me",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Al",
+            "callerLastName": "Pacino",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-101-000",
+            "callDuration": "420",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "John",
+            "callDate": "03/05/2015",
+            "callerFirstName": "Dustin",
+            "callerLastName": "Hoffman",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "123-456-789",
+            "callDuration": "555",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Carl",
+            "callDate": "12/12/2015",
+            "callerFirstName": "Brad",
+            "callerLastName": "Pitt",
+            "callerRelationship": "classMate",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "131-313",
+            "callDuration": "421",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Rob",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Anthony",
+            "callerLastName": "Hopkins",
+            "callerRelationship": "unknown",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "100-000-000",
+            "callDuration": "892",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Linda",
+            "callDate": "11/12/2015",
+            "callerFirstName": "Marlon",
+            "callerLastName": "Brando",
+            "callerRelationship": "daughter",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "1345611",
+            "callDuration": "9547",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Tim",
+            "callDate": "10/10/2015",
+            "callerFirstName": "Jeremy",
+            "callerLastName": "Irons",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "551-111-111",
+            "callDuration": "88",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Sammy",
+            "callDate": "11/08/2015",
+            "callerFirstName": "Denzel",
+            "callerLastName": "Washington",
+            "callerRelationship": "brother",
+            "callStatus": "unsuccessfull",
+            "callerPhoneNumber": "111-111-444",
+            "callDuration": "0",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Adam",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Gene",
+            "callerLastName": "Hackman",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Rooney",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Jeff",
+            "callerLastName": "Bridges",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "NUMBER",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Alex",
+            "callDate": "05/11/2015",
+            "callerFirstName": "Tim",
+            "callerLastName": "Robins",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Alexey",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Henry",
+            "callerLastName": "Fonda",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Kelly",
+            "callDate": "11/11/2015",
+            "callerFirstName": "William",
+            "callerLastName": "Hurt",
+            "callerRelationship": "sister",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-4345-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Zlatan",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Kevin",
+            "callerLastName": "Costner",
+            "callerRelationship": "friend",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Clint",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Clint",
+            "callerLastName": "Eastwood",
+            "callerRelationship": "same",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "Santa Claus",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Leonardo",
+            "callerLastName": "DiCaprio",
+            "callerRelationship": "grandpa",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "100",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        },{
+            "memberName": "No name",
+            "callDate": "11/11/2015",
+            "callerFirstName": "Mel",
+            "callerLastName": "Gibson",
+            "callerRelationship": "brother",
+            "callStatus": "successfull",
+            "callerPhoneNumber": "111-111-111",
+            "callDuration": "6787",
+            "callType": "Any type",
+            "anotherCallProperty": "info",
+            "additionalProperty1": "sdfgsdfgsdfg",
+            "additionalProperty2": "sdfgsdfgsdfg",
+            "additionalProperty3": "sdfgsdfgsdfg",
+            "additionalProperty4": "sdfgsdfgsdfg",
+            "additionalProperty5": "sdfgsdfgsdfg",
+            "additionalProperty6": "sdfgsdfgsdfg",
+            "additionalProperty7": "sdfgsdfgsdfg",
+            "additionalProperty8": "sdfgsdfgsdfg",
+            "additionalProperty9": "sdfgsdfgsdfg"
+        }];
+
+        var gridOptions = {
+            enableGridMenu: true,
+            enablePagination: true,
+            enablePaginationControls: true,
+            paginationPageSizes: [5, 7, 9],
+            paginationPageSize: 5,
+        };
+
+        $scope.gridOptions = gridOptions;
 
         $scope.search = function(date) {
             debugger
             window.x = $scope.date;
         };
 
-
-
         $scope.reset = function(date) {
-            debugger
+            $scope.gridOptions.data = [];
         };
 
-        $scope.myData = [{  
-                "name": "Cox",
-                "gender": "Carney",
-                "company": "Enormo",
-                "employed": "sdsdfgsdfg"
-            },{
-                "name": "Lorraine",
-                "gender": "Wise",
-                "company": "Comveyer",
-                "employed": "sdgsdf"
-            },{
-                "name": "Nancy",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "pesho",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "gosho",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "secret",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "kiro",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "stefan",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": " ",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "aaa",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "1",
-                "gender": "Carney",
-                "company": "Enormo",
-                "employed": "sdsdfgsdfg"
-            },{
-                "name": "2",
-                "gender": "Wise",
-                "company": "Comveyer",
-                "employed": "sdgsdf"
-            },{
-                "name": "3",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "4",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "5",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "6",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "7",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "8",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "9",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            },{
-                "name": "10",
-                "gender": "Waters",
-                "company": "Fuelton",
-                "employed": "sdfg"
-            }];
-
-        //
-        $scope.gridOptions = {
-            enableGridMenu: true,
-            enablePagination: true,
-            enablePaginationControls: true,
-            paginationPageSizes: [5, 7, 9],
-            paginationPageSize: 3,
-            columnDefs: [
-                { name: 'name' },
-                { name: 'gender' },
-                { name: 'company' },
-                { name: 'employed'}
-            ]
+        $scope.getMockedData = function() {
+            $scope.gridOptions = gridOptions;
+            $scope.gridOptions.data = data;
         };
-        $scope.gridOptions.data = $scope.myData;
+
+        $scope.getMockedDataLong = function() {
+            $scope.gridOptions = gridOptions;
+            $scope.gridOptions.data = dataWithMoreProperties;
+        };
     }
 );
