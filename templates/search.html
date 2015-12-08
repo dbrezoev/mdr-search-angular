@@ -13,7 +13,7 @@
                         </div>
                         <div class="col-sm-6 pull-right">
                             <label>To</label>
-                            <input class="form-control" type="text" datepicker>
+                            <input class="form-control" type="text" datepicker ng-model="date">
                         </div>
                     </div>
                     <div class="col-sm-8">
@@ -71,11 +71,11 @@
                     </div>
 
                     <div class="col-sm-8">
-                        <button class="btn btn-primary btn-sm">
+                        <button ng-click="search(date)" class="btn btn-primary btn-sm">
                             New Search
                         </button>
                         &nbsp;
-                        <button class="btn btn-primary btn-sm">
+                        <button ng-click="reset(date)" class="btn btn-primary btn-sm">
                             Reset
                         </button>
                     </div>
