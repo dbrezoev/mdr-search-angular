@@ -628,13 +628,50 @@ mdrSearchApp.controller('SearchController',
             "additionalProperty8": "sdfgsdfgsdfg",
             "additionalProperty9": "sdfgsdfgsdfg"
         }];
+        var columnWidth = '150';
+        var shortDataColmnDefs = [
+            { field: 'memberName', width: columnWidth },
+            { field: 'callDate', width: columnWidth},
+            { field: 'callerFirstName', width: columnWidth},
+            { field: 'callerLastName', width: columnWidth},
+            { field: 'callerRelationship', width: columnWidth},
+            { field: 'callStatus', width: columnWidth},
+            { field: 'callerPhoneNumber', width: columnWidth},
+            { field: 'callDuration', width: columnWidth},
+            { field: 'callType', width: columnWidth},
+            { field: 'anotherCallProperty', width: columnWidth},
+        ];
+
+        var longDataColmnDefs = [
+            { field: 'memberName', width: columnWidth },
+            { field: 'callDate', width: columnWidth},
+            { field: 'callerFirstName', width: columnWidth},
+            { field: 'callerLastName', width: columnWidth},
+            { field: 'callerRelationship', width: columnWidth},
+            { field: 'callStatus', width: columnWidth},
+            { field: 'callerPhoneNumber', width: columnWidth},
+            { field: 'callDuration', width: columnWidth},
+            { field: 'callType', width: columnWidth},
+            { field: 'anotherCallProperty', width: columnWidth},
+            { field: 'additionalProperty1', width: columnWidth},
+            { field: 'additionalProperty2', width: columnWidth},
+            { field: 'additionalProperty3', width: columnWidth},
+            { field: 'additionalProperty4', width: columnWidth},
+            { field: 'additionalProperty5', width: columnWidth},
+            { field: 'additionalProperty6', width: columnWidth},
+            { field: 'additionalProperty7', width: columnWidth},
+            { field: 'additionalProperty8', width: columnWidth},
+            { field: 'additionalProperty9', width: columnWidth},
+        ];
+
+        $scope.showGrid = true;
 
         var gridOptions = {
             enableGridMenu: true,
             enablePagination: true,
             enablePaginationControls: true,
             paginationPageSizes: [5, 7, 9],
-            paginationPageSize: 5,
+            paginationPageSize: 5
         };
 
         $scope.gridOptions = gridOptions;
@@ -649,16 +686,21 @@ mdrSearchApp.controller('SearchController',
 
         $scope.reset = function(date) {
             $scope.gridOptions.data = [];
+            $scope.showGrid = false;
         };
 
         $scope.getMockedData = function() {
             $scope.gridOptions = gridOptions;
             $scope.gridOptions.data = data;
+            $scope.gridOptions.columnDefs = shortDataColmnDefs;
+            $scope.showGrid = true;
         };
 
         $scope.getMockedDataLong = function() {
             $scope.gridOptions = gridOptions;
             $scope.gridOptions.data = dataWithMoreProperties;
+            $scope.gridOptions.columnDefs = longDataColmnDefs;
+            $scope.showGrid = true;
         };
     }
 );
