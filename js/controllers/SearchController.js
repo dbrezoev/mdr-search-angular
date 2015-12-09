@@ -933,5 +933,6 @@ mdrSearchApp.controller('SearchController',
             $scope.gridOptions.columnDefs = longDataColmnDefs;
             $scope.showGrid = true;
         };
+        
     }
 );
