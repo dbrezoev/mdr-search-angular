@@ -3,6 +3,7 @@
   "description": "",
   "repository": "https://github.com/dbrezoev/mdr-search-angular/",
   "scripts": {
+    "prepublish": "npm install",
     "start": "node server.js"
   },
   "devDependencies": {
