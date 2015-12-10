@@ -847,6 +847,8 @@ mdrSearchApp.controller('SearchController',
         //    "additionalProperty20": "20"
         //}];
 
+        
+
         var columnWidth = '150';
         var shortDataColmnDefs = [
             { field: 'memberName', width: columnWidth },
