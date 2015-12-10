@@ -1,6 +1,6 @@
 var express = require('express'),
     EXPRESS_ROOT = __dirname,
-    EXPRESS_PORT = 5000;
+    EXPRESS_PORT = 80;
 
 function startServer() {
     var app = express();

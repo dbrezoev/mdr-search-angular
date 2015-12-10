@@ -5,7 +5,7 @@ mdrSearchApp.controller('SearchController',
 
 
 
-        
+
         var data = [{
             "memberName": "Cox",
             "callDate": "11/11/2015",
