@@ -2,6 +2,7 @@
 
 mdrSearchApp.controller('SearchController',
     function SearchController($scope, $route, dataProvider) {
+        
         var data = [{
             "memberName": "Cox",
             "callDate": "11/11/2015",
