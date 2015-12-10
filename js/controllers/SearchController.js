@@ -896,9 +896,6 @@ mdrSearchApp.controller('SearchController',
 
         $scope.showGrid = true;
 
-        //var shortDataUrl = 'http://localhost:51646/api/members/mocked-data';
-        //var complexDataUrl = 'http://localhost:51646/api/members/more-mocked-data';
-
         var gridOptions = {
             enableGridMenu: true,
             enablePagination: true,
