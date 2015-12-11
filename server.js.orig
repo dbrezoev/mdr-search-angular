@@ -8,9 +8,14 @@ function startServer() {
 
     app.use(express.static(EXPRESS_ROOT));
     app.listen(app.get('port'), function() {
-        console.log('App is running, server is listening on port: ', app.get('port'))
+<<<<<<< HEAD
+        console.log('Server is running on: ', app.get('port'));
     });
 
+=======
+        console.log('App is running, server is listening on port: ', app.get('port'))
+    });
+>>>>>>> feature/jiva_style
 }
 
 startServer();
