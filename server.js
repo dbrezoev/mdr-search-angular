@@ -4,9 +4,13 @@ var express = require('express'),
 
 function startServer() {
     var app = express();
+    app.set('port', (process.env.PORT || EXPRESS_PORT));
+
     app.use(express.static(EXPRESS_ROOT));
-    app.listen(EXPRESS_PORT);
-    console.log('Server is running on: Localhost: ' + EXPRESS_PORT)
+    app.listen(app.get('port'), function() {
+        console.log('Server is running on: ', app.get('port'));
+    });
+
 }
 
 startServer();
