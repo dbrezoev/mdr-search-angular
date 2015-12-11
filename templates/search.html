@@ -63,31 +63,39 @@
                 <div clas="row">
                     <div class="col-sm-4">
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Member ID">
                             <i class="glyphicon glyphicon-search form-control-feedback"></i>
                         </div>
                     </div>
 
                     <div class="col-sm-8">
-                        <button ng-click="search(date)" class="btn btn-primary btn-sm">
+                        <button ng-disabled="gettingData" ng-click="search(date)" class="btn btn-primary btn-sm">
                             New Search
                         </button>
                         &nbsp;
-                        <button ng-click="reset(date)" class="btn btn-primary btn-sm">
+                        <button ng-disabled="gettingData" ng-click="reset(date)" class="btn btn-primary btn-sm">
                             Reset
                         </button>
-                        <button ng-click="getMockedData()" class="btn btn-danger btn-sm">
+                        <button ng-disabled="gettingData" ng-click="getMockedData()" class="btn btn-danger btn-sm">
                             Get Mocked Data
                         </button>
                         &nbsp;
-                        <button ng-click="getMockedDataLong()" class="btn btn-danger btn-sm">
+                        <button ng-disabled="gettingData" ng-click="getMockedDataLong()" class="btn btn-danger btn-sm">
                             Get More Mocked Data
                         </button>
                     </div>
                 </div>
                 <br>
                 <br>
+                <div class="row">
+                    <div class="text-center col-sm-4">
+                        <div ng-show="gettingData === true" class="spinner-loader">
+                            Loading…
+                        </div>
+                    </div>
+                </div>
                 <br>
-                <div ng-show="showGrid" ui-grid="gridOptions" ui-grid-exporter ui-grid-pagination ui-grid-resize-columns class="grid"></div>
+                <br>
+                <div ng-if="showGrid === true" ui-grid="gridOptions" ui-grid-exporter ui-grid-pagination ui-grid-resize-columns class="grid"></div>
         </fieldset>
 </div>
