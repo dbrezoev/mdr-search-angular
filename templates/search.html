@@ -1,10 +1,8 @@
 <div class="container clearfix" ng-controller="SearchController">
-    <div class="container">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <h5>Search call</h5>
-            </div>
-            <div class="panel-body">
+    <fieldset class="scheduler-border">
+            <legend class="scheduler-border">
+                Search call
+            </legend>
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="col-sm-6">
@@ -91,9 +89,5 @@
                 <br>
                 <br>
                 <div ng-show="showGrid" ui-grid="gridOptions" ui-grid-exporter ui-grid-pagination ui-grid-resize-columns class="grid"></div>
-            </div>
-        </div>
-
-
-    </div>
+        </fieldset>
 </div>
