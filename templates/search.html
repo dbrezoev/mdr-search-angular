@@ -8,11 +8,11 @@
                         <div class="form-group">
                             <div class="col-sm-6">
                                 <label>From</label>
-                                <input class="form-control" type="text" datepicker>
+                                <input class="form-control" type="text" datepicker ng-model="filter.from">
                             </div>
                             <div class="col-sm-6">
                                 <label>To</label>
-                                <input class="form-control" type="text" datepicker ng-model="date">
+                                <input class="form-control" type="text" datepicker ng-model="filter.to">
                             </div>
                         </div>
 
@@ -22,10 +22,12 @@
                             <div class="form-group">
                                 <label>Source</label>
                                 <div class="checkbox">
-                                    <input type="checkbox"> IAD
+                                    <label for="iad">IAD</label>
+                                    <input id="iad" type="checkbox" ng-model="filter.iadSelected" ng-disabled="filter.contactHistorySelected===true">
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox"> JIVA
+                                    <label for="jiva">JIVA</label>
+                                    <input id="jiva" type="checkbox" ng-model="filter.jivaSelected" ng-disabled="filter.contactHistorySelected===true">
                                 </div>
                             </div>
                         </div>
@@ -33,13 +35,14 @@
                             <div class="form-group">
                                 <label>Search Type</label>
                                 <div class="checkbox">
-                                    <input type="checkbox"> Contact History
+                                    <label for="contact-history">Contact History</label>
+                                    <input id="contact-history" type="checkbox" ng-model="filter.contactHistorySelected">
                                 </div>
                                 <div class="checkbox">
-                                    <input type="checkbox"> Member Contact Preference
+                                    <label for="preferences">Member Contact Preference</label>
+                                    <input id="preferences" type="checkbox" ng-model="filter.memberContactPreferenceSelected">
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -47,13 +50,13 @@
                 <div clas="row">
                     <div class="col-sm-4">
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="Member ID">
+                            <input type="text" ng-model="filter.memberId" class="form-control" placeholder="Member ID">
                             <i class="glyphicon glyphicon-search form-control-feedback"></i>
                         </div>
                     </div>
 
                     <div class="col-sm-8">
-                        <button ng-disabled="gettingData" ng-click="search(date)" class="btn btn-primary btn-sm">
+                        <button ng-disabled="gettingData" ng-click="search(filter)" class="btn btn-primary btn-sm">
                             New Search
                         </button>
                         &nbsp;

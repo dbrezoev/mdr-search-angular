@@ -2,6 +2,8 @@
 
 mdrSearchApp.controller('SearchController',
     function SearchController($scope, $route, dataProvider) {
+        $scope.filter = {};
+
         var columnWidth = '150';
         var shortDataColmnDefs = [
             { field: 'memberName', width: columnWidth },
@@ -66,9 +68,10 @@ mdrSearchApp.controller('SearchController',
         $scope.gridOptions = gridOptions;
         //$scope.gridOptions.data = data;
 
-        $scope.search = function(date) {
+        $scope.search = function(filter) {
             debugger
-            window.x = $scope.date;
+            console.log($scope.filter)
+            debugger
         };
 
         $scope.reset = function(date) {
@@ -79,7 +82,6 @@ mdrSearchApp.controller('SearchController',
         $scope.getMockedData = function() {
             $scope.gettingData = true;
 
-debugger
             dataProvider.getMockedData().then(function (data) {
                 $scope.gettingData = false;
                 $scope.showGrid = true;
