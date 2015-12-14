@@ -5,58 +5,42 @@
             </legend>
                 <div class="row">
                     <div class="col-sm-4">
-                        <div class="col-sm-6">
-                            <label>From</label>
-                            <input class="form-control" type="text" datepicker>
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <label>From</label>
+                                <input class="form-control" type="text" datepicker>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>To</label>
+                                <input class="form-control" type="text" datepicker ng-model="date">
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <label>To</label>
-                            <input class="form-control" type="text" datepicker ng-model="date">
-                        </div>
+
                     </div>
                     <div class="col-sm-8">
-                        <form class="form-inline">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <strong>Source</strong>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>Source</label>
+                                <div class="checkbox">
+                                    <input type="checkbox"> IAD
                                 </div>
-                                <div class="col-sm-4">
-                                    <strong>Search Type</strong>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> IAD
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Contact History
-                                        </label>
-                                    </div>
+                                <div class="checkbox">
+                                    <input type="checkbox"> JIVA
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> JIVA
-                                        </label>
-                                    </div>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label>Search Type</label>
+                                <div class="checkbox">
+                                    <input type="checkbox"> Contact History
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> Member Contact Preference
-                                        </label>
-                                    </div>
+                                <div class="checkbox">
+                                    <input type="checkbox"> Member Contact Preference
                                 </div>
                             </div>
-                        </form>
+
+                        </div>
                     </div>
                 </div>
                 <br>
