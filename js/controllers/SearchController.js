@@ -32,6 +32,7 @@ mdrSearchApp.controller('SearchController',
             $scope.gettingData = true;
 
             dataProvider.getMockedData().then(function (data) {
+
                 $scope.gridOptions.columnDefs = [];
                 var firstObject = data[0];
                 var property;
@@ -56,6 +57,12 @@ mdrSearchApp.controller('SearchController',
             $scope.gettingData = true;
 
             dataProvider.getMoreMockedData().then(function(data) {
+                if(data) {
+                    $scope.error = true;
+                    $scope.errorMessage = 'Argument Exception!'
+                    $scope.gettingData = false;
+                    return;
+                }
                 $scope.gridOptions.columnDefs = [];
                 var firstObject = data[0];
                 var property;

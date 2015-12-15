@@ -1,4 +1,12 @@
 <div class="container clearfix" ng-controller="SearchController">
+    <div class="container">
+        <div ng-show="error === true" class="alert alert-dismissible alert-warning">
+            <a href="#" class="close" data-dismiss="alert">&times;</a>
+            <strong>Warning!</strong> {{errorMessage}}
+        </div>
+    </div>
+
+
     <fieldset class="scheduler-border">
             <legend class="scheduler-border">
                 Search call
@@ -68,7 +76,7 @@
                         </button>
                         &nbsp;
                         <button ng-disabled="gettingData" ng-click="getMockedDataLong()" class="btn btn-danger btn-sm">
-                            Get More Mocked Data
+                            Raise Exception
                         </button>
                     </div>
                 </div>
