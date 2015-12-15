@@ -31,11 +31,11 @@
                                 <label>Source</label>
                                 <div class="checkbox">
                                     <label for="iad">IAD</label>
-                                    <input id="iad" type="checkbox" ng-model="filter.iadSelected" ng-disabled="filter.contactHistorySelected===false">
+                                    <input id="iad" type="checkbox" ng-model="filter.iadSelected" ng-disabled="!filter.contactHistorySelected">
                                 </div>
                                 <div class="checkbox">
                                     <label for="jiva">JIVA</label>
-                                    <input id="jiva" type="checkbox" ng-model="filter.jivaSelected" ng-disabled="filter.contactHistorySelected===false">
+                                    <input id="jiva" type="checkbox" ng-model="filter.jivaSelected" ng-disabled="!filter.contactHistorySelected">
                                 </div>
                             </div>
                         </div>
